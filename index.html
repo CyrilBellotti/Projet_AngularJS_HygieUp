@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+
+    <head>
+        <title>Hygie'Up</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+
+    </head>
+
+    <body>
+        <div ui-view></div>
+
+
+        <script type="text/javascript" src="assets/lib/angular.min.js"></script>
+        <script type="text/javascript" src="assets/lib/angular-ui-router.min.js"></script>
+        <script type="text/javascript" src="assets/lib/bower_components/parse/parse.js"></script>
+        <script type="text/javascript" src="assets/lib/bower_components/angular-parse/angular-parse.js"></script>
+        <script type="text/javascript" src="assets/lib/bower_components/angular-password/angular-password.js"></script>
+        <script src="assets/lib/jquery/dist/jquery.js"></script>
+
+
+        <script type="text/javascript" src="app/app.js"></script>
+        <script type="text/javascript" src="app/app.config.js"></script>
+        <script type="text/javascript" src="app/app.route.js"></script>
+        <script type="text/javascript" src="dashboard/scripts/factories/user.js"></script>
+        <script type="text/javascript" src="dashboard/scripts/factories/patient.js"></script>
+
+
+        <script type="text/javascript" src="app/components/home/homeController.js"></script>
+        <script type="text/javascript" src="app/components/login/loginController.js"></script>
+        <script type="text/javascript" src="app/components/patient/patientController.js"></script>
+        <script type="text/javascript" src="app/components/patient/addPatientController.js"></script>
+    </body>
+</html>

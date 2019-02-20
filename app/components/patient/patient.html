@@ -1,0 +1,86 @@
+<div class="main-bar">
+    <div class="container">
+        <div class="col-md-7 col-sm-7 col-lg-7 col-xs-7">
+            <div id="titleHeader">
+                Hygie'Up
+            </div>
+        </div>
+        <div class="col-md-1 col-sm-1 col-lg-1 col-xs-1">
+            <a ng-click="$patientCtrl.logout()"><i class="fa fa-power-off btn-power" aria-hidden="true" ></i></a>
+        </div>
+        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+            <div id="imgHeaderPlace">
+                <img src="assets/img/hygieup.png" id="imgHeader">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-1 col-sm-1 col-lg-1 col-xs-1">
+
+        </div>
+        <div class="col-md-7 col-sm-7 col-lg-7 col-xs-7">
+            <h2>Patient : Maxime Smith</h2>
+            <strong>Date de naissance :</strong>
+            <p class="floutage">20/05/1947</p>
+            <strong>Sexe : </strong>
+            <p class="floutage">Homme</p>
+            <strong>Numéro de sécurité social :</strong>
+            <p class="floutage">1234 5678 9012</p>
+            <strong>Adresse email : </strong>
+            <p class="floutage">maxime.smith@gmail.com</p>
+            <strong>Numéro de téléphone : </strong>
+            <p class="floutage">06.05.25.11.97</p>
+            <strong>Numéro d'un proche : </strong>
+            <p class="floutage">06.22.37.78.04</p>
+        </div>
+        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+            <div class="listrap-toggle-patient">
+                <span></span>
+                <img ng-src='{{$patientCtrl.patients[1].pictureProfil._url}}' class="img-patient"/>
+                <button class="btn-change-profil">Modifer le profil</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-1 col-sm-1 col-lg-1 col-xs-1">
+
+        </div>
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+            <div class="box">
+                <div class="">
+                    <h2>Ordonnance :</h2>
+                    <p>ANTARENE CODEINE 200 mg/30 mg, 1 comprimé le matin pendant 3 jours</p>
+                    <p>ALGISEDAL, 1 comprimé matin/midi/soir pendant 7 jours</p>
+                    <p>DONEPEZIL chaque matin pendant 3 mois</p>
+                    <p>EXELON deux fois par jours matin et soir pendant 3 mois</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 col-sm-1 col-lg-1 col-xs-1">
+        </div>
+    </div>
+</div>
+
+<div class="container btn-standard-position">
+    <div class="row">
+        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+            <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+                <button class="btn-standard">Contacter un proche</button>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+            <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+                <button class="btn-standard">Modifier l'ordonnance</button>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-4">
+            <button class="btn-standard">Proposer un rendez-vous</button>
+        </div>
+    </div>
+</div>

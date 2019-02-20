@@ -1,0 +1,97 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "angular-parse",
+        "scope": null,
+        "escapedName": "angular-parse",
+        "name": "angular-parse",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/lirycxxxx/Documents/www/Formation-Angular/Test7"
+    ]
+  ],
+  "_from": "angular-parse@latest",
+  "_id": "angular-parse@0.2.2",
+  "_inCache": true,
+  "_location": "/angular-parse",
+  "_nodeVersion": "4.1.0",
+  "_npmUser": {
+    "name": "ivnivnch",
+    "email": "ivnivnch@gmail.com"
+  },
+  "_npmVersion": "2.14.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "angular-parse",
+    "scope": null,
+    "escapedName": "angular-parse",
+    "name": "angular-parse",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular-parse/-/angular-parse-0.2.2.tgz",
+  "_shasum": "abdcea01b07233c9b047ab7b1ddc501b96873955",
+  "_shrinkwrap": null,
+  "_spec": "angular-parse",
+  "_where": "/Users/lirycxxxx/Documents/www/Formation-Angular/Test7",
+  "author": {
+    "email": "ivnivnch@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/ivnivnch/angular-parse/issues"
+  },
+  "dependencies": {},
+  "description": "Angular wrapper for Parse.com JavaScript SDK.",
+  "devDependencies": {
+    "angular": "^1.4.6",
+    "angular-mocks": "^1.4.6",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.10",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-jasmine": "^0.3.6",
+    "karma-webpack": "^1.7.0",
+    "parse": "^1.6.3",
+    "webpack": "^1.12.2"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "abdcea01b07233c9b047ab7b1ddc501b96873955",
+    "tarball": "https://registry.npmjs.org/angular-parse/-/angular-parse-0.2.2.tgz"
+  },
+  "gitHead": "e2a63d5bea8b7bc55d61f1b5b0bffa4fa7ca561e",
+  "homepage": "https://github.com/ivnivnch/angular-parse",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "parse",
+    "parsesdk"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "maintainers": [
+    {
+      "name": "ivnivnch",
+      "email": "ivnivnch@gmail.com"
+    }
+  ],
+  "name": "angular-parse",
+  "optionalDependencies": {},
+  "readme": "# Angular-Parse\r\nAngular wrapper for [Parse.com JavaScript SDK](https://parse.com/docs/js/api/).\r\n## Features\r\n### Getters and setters for attributes\r\n#### Define object attributes\r\n```javascript\r\nvar object = new Parse.Object('Test');\r\nParse.defineAttributes(object, ['a', 'b', 'c']);\r\nobject.a = 123;\r\nconsole.assert(object.a == 123);\r\nconsole.assert(object.get('a') == 123);\r\n```\r\n#### Define subclass attributes\r\n```javascript\r\nvar MyClass = Parse.Object.extend(\"ClassName\");\r\nParse.defineAttributes(MyClass, ['a', 'b', 'c']);\r\nvar object = new MyClass();\r\nobject.a = 123;\r\nconsole.assert(object.a == 123);\r\nconsole.assert(object.get('a') == 123);\r\n```\r\n#### Use decorator\r\n```javascript\r\n@Parse.defineAttributes(['a', 'b', 'c'])\r\nclass MyClass extends Parse.Object {\r\n  constructor() {\r\n    super(\"ClassName\");\r\n  }\r\n}\r\nvar object = new MyClass();\r\nobject.a = 123;\r\nconsole.assert(object.a == 123);\r\nconsole.assert(object.get('a') == 123);\r\n```\r\n### $q Promise\r\n```javascript\r\nobject.save()\r\n  .then(function() {\r\n    $scope.saved = true;\r\n  })\r\n  .catch(function(err) {\r\n    $scope.error = err;\r\n  });\r\n```\r\n## Installation\r\n### NPM\r\n`npm install angular-parse`\r\n## Setup\r\n### Browser\r\n```html\r\n<script src=\"https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js\"></script>\r\n<script src=\"https://parse.com/downloads/javascript/parse-1.6.2.min.js\"></script>\r\n<script src=\"angular-parse/angular-parse.js\"></script>\r\n<script>\r\n  angular.module('demo', ['ngParse']);\r\n</script>\r\n```\r\n### CommonJS\r\n`npm install angular parse angular-parse`\r\n```javascript\r\nvar angular = require('angular');\r\nvar ngParse = require('angular-parse');\r\nangular.module('demo', [ngParse]);\r\n```\r\n## Usage\r\n### Include `ngParse` module\r\n```javascript\r\nangular.module('demo', ['ngParse']);\r\n```\r\n### Initialize Parse\r\n```javascript\r\nangular.module('demo')\r\n  .config(['ParseProvider', function(ParseProvider) {\r\n    ParseProvider.initialize(MY_PARSE_APP_ID, MY_PARSE_JS_KEY);\r\n  }]);\r\n```\r\n### Initialize Facebook\r\n```html\r\n<script src=\"https://connect.facebook.net/en_US/sdk.js\"></script>\r\n```\r\n```javascript\r\nangular.module('demo')\r\n  .config(['ParseProvider', function(ParseProvider) {\r\n    ParseProvider.FacebookUtils.init({\r\n      appId: MY_FACEBOOK_APP_ID,\r\n      version: 'v2.4',//Currently available versions https://developers.facebook.com/docs/apps/changelog\r\n      xfbml: false\r\n    });\r\n  }]);\r\n```\r\n### Subclass\r\n```javascript\r\nangular.module('demo')\r\n  .factory('ParseComment', ['Parse', function(Parse) {\r\n    var ParseComment = Parse.Object.extend('Comment', {/*...*/}, {/*...*/});\r\n    Parse.defineAttributes(ParseComment, ['user', 'text']);\r\n    \r\n    /*\r\n      Or use decorator with Babel https://babeljs.io/\r\n      \r\n      @Parse.defineAttributes('user', 'text')\r\n      class ParseComment extends Parse.Object {\r\n        constructor() {\r\n          super(\"Comment\");\r\n        }\r\n      }\r\n      Parse.Object.registerSubclass('Comment', ParseComment);\r\n    */\r\n  }]);\r\n```\r\n### User attributes\r\n```javascript\r\nangular.module('demo')\r\n  .config(['ParseProvider', function(ParseProvider) {\r\n    ParseProvider.defineAttributes(ParseProvider.User, 'first_name', 'last_name', 'picture', 'comments');\r\n  }]);\r\n```\r\n### Authenticate\r\n```javascript\r\nangular.module('demo')\r\n  .run(['$rootScope', 'Parse', function($rootScope, Parse) {\r\n    if (!Parse.User.authenticated()) {\r\n      Parse.FacebookUtils.logIn('email', {})\r\n        .then(function(user) {\r\n          $rootScope.user = user;\r\n        })\r\n        .catch(function(err) {/*...*/});\r\n    }\r\n  }]);\r\n```\r\n### Class instance\r\n```javascript\r\nangular.module('demo')\r\n  .controller('CommentController', ['$scope', 'Parse', 'ParseComment', function($scope, Parse, ParseComment) {\r\n    var user = Parse.User.current();\r\n    $scope.comment = new ParseComment();\r\n    $scope.comment.set({user: user});\r\n  }]);\r\n```\r\n```html\r\n<form ng-controller=\"CommentController\" ng-submit=\"comment.save()\">\r\n  <label>\r\n    Comment\r\n    <textarea ng-model=\"comment.text\"></textarea>\r\n  </label>\r\n  <p>User: {{comment.user.username}}</p>\r\n  <p>Created At: {{comment.createdAt}}</p>\r\n  <input type=\"submit\" value=\"Save\"/>\r\n</form>\r\n```\r\n### Query\r\n```javascript\r\nangular.module('demo')\r\n  .controller('CommentsController', ['$scope', 'Parse', 'ParseCommentClass', function($scope, Parse, ParseComment) {\r\n    new Parse.Query(ParseComment)\r\n      .include('user')\r\n      .find()\r\n      .then(function(comments) {\r\n        $scope.comments = comments;\r\n      })\r\n      .catch(function(err) {\r\n        $scope.error = err;\r\n      });\r\n  }]);\r\n```\r\n```html\r\n<div ng-controller=\"CommentsController\">\r\n  <div ng-repeat=\"comment in comments track by comment.$id\">\r\n    <p>User: {{comment.user.username}}</p>\r\n    <img ng-src=\"comment.user.picture\"/>\r\n    <p>{{comment.text}}</p>\r\n    <p>Created At: {{comment.createdAt}}</p>\r\n  </div>\r\n</div>\r\n```\r\n## License\r\n[MIT](https://raw.githubusercontent.com/ivnivnch/angular-parse/master/LICENSE)\r\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivnivnch/angular-parse.git"
+  },
+  "scripts": {
+    "build": "webpack",
+    "test": "karma start"
+  },
+  "version": "0.2.2"
+}

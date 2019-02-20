@@ -1,0 +1,195 @@
+.main-bar {				/* Applique un style sur l'ensemble de la NavBar */
+    background-color: #A4050D;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5%;
+}
+
+#titleHeader {
+    display:flex;
+    justify-content: flex-start;
+    font-size:50px;
+    color:white;
+}
+
+#imgHeader {
+    height: 80px;
+}
+
+#imgHeaderPlace {
+    display:flex;
+    justify-content: flex-end;
+}
+
+
+
+
+
+.box {
+    border-radius: 3px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    padding: 10px 25px;
+    display: block;
+    margin-top: 60px;
+}
+
+.info h4 {
+    text-transform: uppercase;
+}
+.info > p {
+    color: #717171;
+    font-size: 16px;
+    padding-top: 10px;
+    text-align: justify;
+}
+.info > a {
+    background-color: #03a9f4;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: #fff;
+    transition: all 0.5s ease 0s;
+}
+.info > a:hover {
+    background-color: #0288d1;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.12);
+    color: #fff;
+    transition: all 0.5s ease 0s;
+}
+
+
+
+/*
+// Listrap v1.0, by Gustavo Gondim (http://github.com/ggondim)
+// Licenced under MIT License
+// For updates, improvements and issues, see https://github.com/inosoftbr/listrap
+*/
+
+.listrap {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.listrap li {
+    margin: 0;
+    padding: 10px;
+}
+
+.listrap li.active, .listrap li:hover {
+    background-color: #d9edf7;
+}
+
+.listrap strong {
+    margin-left: 10px;
+}
+
+.listrap .listrap-toggle {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+
+.listrap .listrap-toggle span {
+    background-color: #428bca;
+    opacity: 0.8;
+    z-index: 100;
+    width: 60px;
+    height: 60px;
+    display: none;
+    position: absolute;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    vertical-align: middle;
+    color: #ffffff;
+}
+
+.listrap .listrap-toggle span:before {
+    font-family: 'Glyphicons Halflings';
+    content: "\e013";
+}
+
+.listrap li.active .listrap-toggle span {
+    display: block;
+}
+
+.img-circle {
+    height: 60px;
+    width: 60px;
+}
+
+.btn-check {
+    background-color: #A4050D;
+    color:white;
+    border-color: #A4050D;
+}
+
+.zone-btn-check {
+    padding-top:2%
+}
+
+.btn-check:hover {
+    background-color: #8E0D0D;
+}
+
+.btn-power {
+    color:#A4050D;
+}
+
+.btn-power:hover {
+    color:#8E0D0D;
+}
+
+
+.btn-add {
+    background-color: #A4050D;
+    color:white;
+    border-color: #A4050D;
+}
+
+.btn-add:hover {
+    background-color: #8E0D0D;
+}
+
+.img-patient {
+    margin-top:10%;
+    height: 75%;
+    width: 75%;
+}
+
+.floutage {
+    color: transparent;
+    text-shadow: 0px 0px 5px #333;
+}
+
+.btn-change-profil {
+    background-color: #A4050D;
+    color:white;
+    border-color: #A4050D;
+    margin-top:30px;
+    margin-left:70px;
+}
+
+.btn-standard {
+    background-color: #A4050D;
+    color:white;
+    border-color: #A4050D;
+    height:40px;
+    width: 180px;
+}
+
+.btn-standard-position {
+    margin-top:5%;
+    margin-left:11.5%;
+    margin-bottom: 15%;
+}
+
+h2 {
+    margin-bottom: 5%;
+}

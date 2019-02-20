@@ -1,0 +1,37 @@
+<div class="main-bar">
+    <div class="container">
+        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+            <div id="titleHeader">
+                Hygie'Up
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-lg-6 col-xs-6">
+            <div id="imgHeaderPlace">
+                <img src="assets/img/hygieup.png" id="imgHeader">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
+            <form>
+                <div class="form-group">
+                    <label for="name">Nom de la société : </label>
+                    <input type="text" class="form-control" id="name" placeholder="Nom" ng-model="$modalCtrl.group.name">
+                </div>
+                <div class="form-group">
+                    <label for="name">Description : </label>
+                    <textarea rows="4" cols="50" type="text" class="form-control" id="description" placeholder="Description" ng-model="$modalCtrl.group.description"></textarea>
+                </div>
+                <div ng-if="!$modalCtrl.addImg">
+                    <button class="btn btn-secondary btn-sm" type="button" ng-click="$modalCtrl.addImgTrue()">Ajouter image</button>
+                </div>
+                <div class="form-group" ng-if="$modalCtrl.addImg">
+                    <label for="logoSociety">Ajouter un logo : </label>
+                    <input type="file" id="logoSociety">
+                </div>
+            </form>        </div>
+    </div>
+</div>
